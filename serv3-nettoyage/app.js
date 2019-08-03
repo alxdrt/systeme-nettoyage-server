@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var amqp = require('amqplib/callback_api');
 var routes = require("./routes/routes.js");
 var app = express();
 
