@@ -1,5 +1,7 @@
 var amqp = require('amqplib/callback_api');
 
+const HOST = "localhost";
+
 var appRouter = function (app) {
   app.get("/", function(req, res) {
     res.status(200).send("Welcome to our restful API");
@@ -8,7 +10,7 @@ var appRouter = function (app) {
   app.post("/", function(req, res) {
     res.status(200).send("POST REQUEST / Welcome to our restful API");
     
-    amqp.connect('amqp://localhost', function(error0, connection) {
+    amqp.connect('amqp://'+HOST, function(error0, connection) {
     if (error0) {
         throw error0;
     }
