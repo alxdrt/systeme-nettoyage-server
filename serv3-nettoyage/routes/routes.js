@@ -7,6 +7,11 @@ var appRouter = function (app) {
     res.status(200).send("Welcome to our restful API");
   });
 
+  app.get("/systeme-nettoyage", function(req, res) {
+    console.log("systeme nettoyage");
+    res.redirect('SMA.html');
+  });
+
   app.post("/", function(req, res) {
     res.status(200).send("POST REQUEST / Welcome to our restful API");
     
@@ -38,5 +43,8 @@ var appRouter = function (app) {
 
   });
 }
+
+
+
 
 module.exports = appRouter;

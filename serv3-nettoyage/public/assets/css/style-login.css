@@ -1,0 +1,97 @@
+/* ---- reset ---- */
+
+body {
+  margin: 0;
+  /*font:normal 75% Arial, Helvetica, sans-serif;*/
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  /*background-image: url("../img/bg.jpg");*/
+  background-image: url("https://images.pexels.com/photos/1452701/pexels-photo-1452701.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  
+  /*background-image: url("https://66.media.tumblr.com/2257c08d017d8cb524ca9a8be118bab8/tumblr_par5peaaHh1rctcffo2_500.gif");*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+
+.img-login{
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+#login-button{
+  /*cursor: pointer;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*padding: 30px;*/
+  margin: auto;
+  min-width:300px;
+  width: 25vw;
+  height: 36vh;
+  /*border-radius: 50%;*/
+  background: rgba(3,3,3,0.8);
+  overflow: hidden;
+  /*opacity: 0.9;*/
+  box-shadow: 10px 10px 30px #000;
+
+}
+
+@media screen and (max-width: 450px) {
+  #login-button{
+    height: 47vh!important;
+  }
+}
+
+
+.auth-link
+{
+  color:white;
+  border:1px solid white;
+  padding:2%;
+}
+
+.cookie-link
+{
+  color:white;
+  border:1px solid white;
+  padding:0.3%;
+  cursor:pointer;
+}
+
+.auth-link:hover
+{
+  color:black;
+  background-color:white;
+  transition: 0.4s;
+}
+
+.cookie-link:hover
+{
+  color:black;
+  background-color:white;
+  transition: 0.4s;
+}
+
+.img-center
+{
+  display:block;
+  margin:auto;
+}
