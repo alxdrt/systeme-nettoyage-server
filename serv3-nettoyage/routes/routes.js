@@ -1,5 +1,6 @@
 var amqp = require('amqplib/callback_api');
-
+var request = require('request');
+var path = require('path');
 
 const pwd = 'guest:robots1@';
 const HOST = "51.91.21.19:32511/";
@@ -7,12 +8,8 @@ const HOST = "51.91.21.19:32511/";
 var appRouter = function (app) {
 
   app.get("/", function(req, res) {
-    res.status(200).send("Welcome to our restful API");
-  });
-
-  app.get("/app", function(req, res) {
     console.log("lancement opération systeme nettoyage");
-    res.redirect('SMA.html');
+    res.sendFile(path.resolve('public/SMA.html'));
   });
 
   app.post("/", function(req, res) {
