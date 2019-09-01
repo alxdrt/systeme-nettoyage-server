@@ -10,8 +10,8 @@ var appRouter = function (app) {
     res.status(200).send("Welcome to our restful API");
   });
 
-  app.get("/systeme-nettoyage", function(req, res) {
-    console.log("systeme nettoyage");
+  app.get("/app", function(req, res) {
+    console.log("lancement opération systeme nettoyage");
     res.redirect('SMA.html');
   });
 
