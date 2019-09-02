@@ -2,8 +2,8 @@ var amqp = require('amqplib/callback_api');
 var request = require('request');
 var path = require('path');
 
-const pwd = 'guest:robots1@';
-const HOST = "51.91.21.19:32511/";
+const pwd = 'guest:robots@';
+const HOST = "51.91.21.19:30854/";
 
 var appRouter = function (app) {
 
@@ -13,7 +13,6 @@ var appRouter = function (app) {
   });
 
   app.post("/", function(req, res) {
-    res.status(200).send("POST REQUEST / Welcome to our restful API");
     console.log('Try to send amqp request to robots');
     amqp.connect('amqp://'+pwd+HOST, function(error0, connection) {
     if (error0) {
@@ -36,6 +35,7 @@ var appRouter = function (app) {
         channel.sendToQueue(queue, Buffer.from(msg));
 
         console.log(" [x] Sent %s", msg);
+        res.sendFile(path.resolve('public/SMA.html'));
     });
     setTimeout(function() {
         connection.close();
