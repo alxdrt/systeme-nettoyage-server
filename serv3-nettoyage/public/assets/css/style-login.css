@@ -63,6 +63,7 @@ canvas {
 
 .auth-link
 {
+  background-color: transparent;
   color:white;
   border:1px solid white;
   padding:2%;
@@ -79,7 +80,7 @@ canvas {
 .auth-link:hover
 {
   color:black;
-  background-color:white;
+  background-color:white!important;
   transition: 0.4s;
 }
 
