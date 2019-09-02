@@ -28,7 +28,7 @@ var appRouter = function (app) {
         }
 
         var queue = 'Robots';
-        var msg = 'Lancement opération';
+        var msg = '{signal: \"start-drone\"}';
 
         channel.assertQueue(queue, {
             durable: false
