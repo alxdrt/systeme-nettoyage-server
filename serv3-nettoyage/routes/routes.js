@@ -29,8 +29,9 @@ function sendMessage(connection,curMsg){
           durable: true
         });
 
-	    channel.publish(exchange_name, routing_key, Buffer.from(curMsg));
-        console.log(" [x] Sent %s", curMsg);
+        var msg = '{signal: "'+ curMsg +'"}';
+	    channel.publish(exchange_name, routing_key, Buffer.from(msg));
+        console.log(" [x] Sent %s", msg);
       setTimeout(function() {
         connection.close();
       }, 500);
